@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { Provider as PaperProvider, DefaultTheme } from 'react-native-paper';
 import * as React from 'react';
 import Header from './src/components/Header'
+import Post from './src/components/Post'
+
 
 const theme = {
   ...DefaultTheme,
@@ -13,12 +15,12 @@ const theme = {
   },
 };
 
-
 export default function App() {
   return (
     <PaperProvider theme={theme}>
     <Header />
-    <StatusBar style="auto" />
+    <Post image={require('./assets/charmande.jpg')}/>
+    <StatusBar style="dark" />
   </PaperProvider>
   );
 }
