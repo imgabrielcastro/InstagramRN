@@ -1,0 +1,38 @@
+{
+  "name": "instagram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/native": "^7.1.14",
+    "@react-navigation/native-stack": "^7.3.21",
+    "axios": "^0.18.0",
+    "expo": "~53.0.13",
+    "expo-status-bar": "~2.2.3",
+    "gravatar": "^1.8.2",
+    "react": "19.0.0",
+    "react-native": "0.79.4",
+    "react-native-gesture-handler": "^2.26.0",
+    "react-native-image-picker": "^8.2.1",
+    "react-native-paper": "^5.14.5",
+    "react-native-reanimated": "^3.18.0",
+    "react-native-safe-area-context": "^5.5.0",
+    "react-native-screens": "^4.11.1",
+    "react-native-vector-icons": "^10.2.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}
