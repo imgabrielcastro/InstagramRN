@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Platform, Image } from 'react-native';
-import { Text, useTheme, Surface } from 'react-native-paper';
+import { Text, useTheme } from 'react-native-paper';
 
 const icon = require('../../assets/icon.png');
 
@@ -24,7 +24,7 @@ export default Header;
 const styles = StyleSheet.create({
   container: {
     marginTop: 0,
-    paddingTop: Platform.OS === 'ios' ? 45 : 0,
+    paddingTop: Platform.OS === 'ios' ? 55 : 0,
     padding: 10,
     borderBottomWidth: 1,
     borderColor: '#ccc',

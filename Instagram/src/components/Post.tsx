@@ -9,19 +9,21 @@ import AddComment from './AddComment';
 
 type PostProps = {
     image: ImageSourcePropType;
+    email: string;
+    nickname: string;
     comments: {
         nickname: string;
         text: string;
     }[];
 }
 
-const Post: React.FC<PostProps> = ({image, comments}) => {
+const Post: React.FC<PostProps> = ({image, comments, email, nickname}) => {
     const colors = useTheme();
     
     return(
         <View style={styles.container}>
             <Image source={image} style={styles.image}/>  
-            <Author name="Charmander" email="charmander@gmail.com" />
+            <Author name={nickname} email={email} />
             <Comments comments={comments} />
             <AddComment/>
         </View>
