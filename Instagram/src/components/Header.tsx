@@ -4,20 +4,22 @@ import { Text, useTheme, Surface } from 'react-native-paper';
 
 const icon = require('../../assets/icon.png');
 
-export default function Header() {
+const Header: React.FC = () => {
   const { colors } = useTheme();
 
   return (
-    <Surface style={[styles.container, {backgroundColor: colors.background}]}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       <View style={styles.rowContainer}>
         <Image source={icon} style={styles.image} />
         <Text variant="titleLarge" style={{ color: colors.onSurface, marginLeft: 10 }}>
           Instagram
         </Text>
       </View>
-    </Surface>
+    </View>
   );
-}
+};
+
+export default Header;
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderColor: '#ccc',
-    elevation: 4, 
+    elevation: 4,
   },
   rowContainer: {
     flexDirection: 'row',

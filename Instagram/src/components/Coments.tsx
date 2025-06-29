@@ -2,27 +2,31 @@ import React from "react";
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {Text, useTheme} from 'react-native-paper';
 
-export default function Comments (props: {comments: any}) {
-    const colors = useTheme();
-    let view = null
+type Comment = {
+    nickname: string;
+    text: string;
+  };
 
-    if (props.comments) {
-        view = props.comments.map((item, index) => {
-            return(
+type CommentsProps = {
+    comments: Comment[];
+}
+
+const Comments: React.FC<CommentsProps> = ({ comments }) => {
+    const colors = useTheme();
+
+    return (
+        <View style={styles.container}>
+            {comments.map((item, index) => (
                 <View style={styles.commentContainer} key={index}>
                     <Text variant="bodyMedium" style={styles.nickname}>{item.nickname}:</Text>
                     <Text variant="bodyMedium" style={styles.comment}>{item.text}</Text>
                 </View>
-            )
-        }) 
-    }
-
-    return (
-        <View style={styles.container}>
-            {view}
+            ))}
         </View>
-    )
-}
+    );
+};
+
+export default Comments;
 
 const styles = StyleSheet.create({
     container: {

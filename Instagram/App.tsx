@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Provider as PaperProvider, DefaultTheme, Surface } from "react-native-paper";
+import { Provider as PaperProvider, DefaultTheme, Surface} from "react-native-paper";
 import * as React from "react";
 import Header from "./src/components/Header";
 import Post from "./src/components/Post";
