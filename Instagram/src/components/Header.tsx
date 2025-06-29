@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Platform, Image } from 'react-native';
 import { Text, useTheme, Surface } from 'react-native-paper';
 
-const icon = require('../../assets/logo.jpg');
+const icon = require('../../assets/icon.png');
 
 export default function Header() {
   const { colors } = useTheme();

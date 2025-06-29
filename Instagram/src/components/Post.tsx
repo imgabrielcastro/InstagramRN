@@ -2,15 +2,17 @@ import * as React from 'react';
 import {StyleSheet, Image, View, Dimensions} from 'react-native';
 import {Surface, useTheme} from 'react-native-paper';
 import Author from './Author';
+import Comments from './Coments';
 
-export default function Post({ image }: { image: any }) {
+export default function Post({ image, comments }: { image: any, comments: any }) {
     const colors = useTheme();
     
     return(
-        <Surface style={styles.container}>
+        <View style={styles.container}>
             <Image source={image} style={styles.image}/>  
             <Author name="Charmander" email="charmander@gmail.com" />
-        </Surface>
+            <Comments comments={comments} />
+        </View>
     )
 }
 
